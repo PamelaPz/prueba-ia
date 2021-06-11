@@ -27,7 +27,7 @@ function NavBar() {
                     </div>
                     <ul className="wp_list">
                         <li>
-                            <button onClick={showMenu} className={ showMenuModal == false ? 'menu_bars' : 'menu_bars active'}>
+                            <button onClick={showMenu} className={ showMenuModal === false ? 'menu_bars' : 'menu_bars active'}>
                                 <span></span>
                                 <span></span>
                                 <span></span>
