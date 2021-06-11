@@ -1,6 +1,8 @@
 import data from '../assets/data.json'
 import fresa6 from '../assets/images/img-fresas-6.png'
 import fresa7 from '../assets/images/img-fresas-7.png'
+import fresa5 from '../assets/images/img-fresas-5.png'
+import fresa4 from '../assets/images/img-fresas-4@2x.png'
 
 function InfoNutritional() {
   return (
@@ -43,6 +45,8 @@ function InfoNutritional() {
             <div className="wp_fresasAbsolute">
                 <img src={fresa6} alt="fresa6" id="fresa6"/>
                 <img src={fresa7} alt="fresa7" id="fresa7"/>
+                <img src={fresa4} alt="fresa4" id="fresa4"/>
+                <img src={fresa5} alt="fresa5" id="fresa5"/>
             </div>
         </div>
     </>

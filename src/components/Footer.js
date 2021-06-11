@@ -1,5 +1,5 @@
-import imgDanone from '../assets/images/img-logo-danone.png';
-import imgVitalinea from '../assets/images/img-logo-footer.png';
+import imgDanone from '../assets/images/img-logo-danone@3x.png';
+import imgVitalinea from '../assets/images/img-logo-footer@3x.png';
 
 function Footer() {
   return (

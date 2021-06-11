@@ -1,7 +1,8 @@
-import productoYogurt from '../assets/images/img-bote-fresa.png';
-import imgAvalado from '../assets/images/img-sello-avalado.png';
-import imgCalorias from '../assets/images/img-100-kcal.png';
+import productoYogurt from '../assets/images/img-bote-fresa@3x.png';
+import imgAvalado from '../assets/images/img-sello-avalado@3x.png';
+import imgCalorias from '../assets/images/img-100-kcal@3x.png';
 import flechaScroll from '../assets/images/flecha.svg';
+import fresa3 from '../assets/images/img-fresas-3.png';
 
 function Banner() {
   return (
@@ -31,6 +32,9 @@ function Banner() {
             </div>
             <div className="wp_btnScroll">
                 <button className="btn_scroll"><img src={flechaScroll} alt=""/></button>
+            </div>
+            <div className="wp_fresas">
+                <img src={fresa3} alt="avalado"/>
             </div>
         </div>
         <div id="shapeBg"></div>
