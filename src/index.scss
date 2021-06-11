@@ -72,3 +72,57 @@ $color-white: #fff;
   letter-spacing: 2.4px;
 }
 
+@media only screen and (min-width: 375px) {
+  .title_primary {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $color-primary;
+  }
+  .title_secondary {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $color-primary;
+  }
+  .p_sabor, .p_saborBtn {
+    display: inline-block;
+    font-size: .76rem;
+    font-weight: 600;
+  }
+  .p_sabor {
+    font-size: .85rem;
+  }
+  .p_infoLg {
+    font-size: .76rem;
+    font-weight: 300; 
+  }
+  .p_info {
+    font-size: .76rem;
+    font-weight: 600; 
+  }
+  .p_btnBuy {
+    color: $color-white;
+    font-size: .76rem;
+  }
+  .p_table {
+    font-size: .7rem;
+  }
+  .p_infoProdcuto {
+    font-size: .65rem;
+    color: $color-primary;
+    text-align: center;
+  }
+  .p_terminos {
+    font-size: .55rem;
+    line-height: 1.6;
+    font-weight: 600; 
+  }
+  .p_derechos {
+    font-size: .65rem;
+    text-align: center;
+    font-weight: 600; 
+  }
+  
+  .letterSpace {
+    letter-spacing: 2.4px;
+  }
+}
