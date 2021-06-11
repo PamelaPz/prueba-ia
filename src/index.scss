@@ -1,0 +1,74 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+/* Variables */
+$color-primary: #78246d;
+$color-secondary: #000;
+$color-gradientOne: #f9e6e6;
+$color-gradientTwo: #ebacac;
+$color-btnOpacity: rgba(255, 0, 0, 0.1);
+$color-btnBorderOpacity: rgba(0, 0, 0, 0.14);
+$color-white: #fff;
+
+
+/* Estilos globales */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title_primary {
+  font-size: 1.08rem;
+  font-weight: 300;
+  color: $color-primary;
+}
+.title_secondary {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: $color-primary;
+}
+.p_sabor, .p_saborBtn {
+  display: inline-block;
+  font-size: .76rem;
+  font-weight: 600;
+}
+.p_sabor {
+  font-size: .85rem;
+}
+.p_infoLg {
+  font-size: .76rem;
+  font-weight: 300; 
+}
+.p_info {
+  font-size: .76rem;
+  font-weight: 600; 
+}
+.p_btnBuy {
+  color: $color-white;
+  font-size: .76rem;
+}
+.p_table {
+  font-size: .7rem;
+}
+.p_infoProdcuto {
+  font-size: .65rem;
+  color: $color-primary;
+  text-align: center;
+}
+.p_terminos {
+  font-size: .55rem;
+  line-height: 1.6;
+  font-weight: 600; 
+}
+.p_derechos {
+  font-size: .65rem;
+  text-align: center;
+  font-weight: 600; 
+}
+
+.letterSpace {
+  letter-spacing: 2.4px;
+}
+
