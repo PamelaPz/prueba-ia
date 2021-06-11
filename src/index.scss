@@ -74,55 +74,160 @@ $color-white: #fff;
 
 @media only screen and (min-width: 375px) {
   .title_primary {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: $color-primary;
+    font-size: 1.25rem;
   }
   .title_secondary {
-    font-size: 1.2rem;
+    font-size: 1.38rem;
+  }
+  .p_sabor, .p_saborBtn {
+    font-size: .9rem;
+  }
+  .p_sabor {
+    font-size: .98rem;
+  }
+  .p_infoLg {
+    font-size: .9rem;
+  }
+  .p_btnBuy {
+    font-size: .9rem;
+  }
+  .p_info {
+    font-size: .83rem;
+  }
+  .p_table {
+    font-size: .76rem;
+  }
+  .p_infoProdcuto {
+    font-size: .7rem;
+  }
+  .p_terminos {
+    font-size: .64rem;
+    text-align: center;
+  }
+  .p_derechos {
+    font-size: .76rem;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .title_primary {
+    font-size: 1.4rem;
+  }
+  .title_secondary {
+    font-size: 1.54rem;
+  }
+  .p_sabor, .p_saborBtn {
+    font-size: 1rem;
+  }
+  .p_sabor {
+    font-size: 1.15rem;
+  }
+  .p_infoLg {
+    font-size: 1rem;
+  }
+  .p_btnBuy {
+    font-size: 1rem;
+  }
+  .p_info {
+    font-size: .92rem;
+  }
+  .p_table {
+    font-size: .78rem;
+  }
+  .p_infoProdcuto {
+    font-size: .85rem;
+    padding-top: .8rem;
+  }
+  .p_terminos {
+    font-size: .73rem;
+    text-align: center;
+  }
+  .p_derechos {
+    font-size: .83rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .title_primary {
+    font-size: 2.6rem;
+  }
+  .title_secondary {
+    font-size: 2.9rem;
+  }
+  .p_saborBtn {
+    font-size: 1.6rem;
+  }
+  .p_sabor {
+    font-size: 1.8rem;
+  }
+  .p_infoLg {
+    font-size: 1.8rem;
+  }
+  .p_btnBuy {
+    font-size: 1.8rem;
+  }
+  .p_info {
+    font-size: 1.7rem;
+  }
+  .p_table {
+    font-size: 1.5rem;
+  }
+  .p_infoProdcuto {
+    font-size: 1.5rem;
+  }
+  .p_terminos {
+    font-size: 1.29rem;
+  }
+  .p_derechos {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  .title_primary {
+    font-size: 2.5rem;
+  }
+  .title_secondary {
+    font-size: 2.9rem;
     font-weight: 300;
     color: $color-primary;
   }
-  .p_sabor, .p_saborBtn {
-    display: inline-block;
-    font-size: .76rem;
+  .p_saborBtn {
+    font-size: .95rem;
     font-weight: 600;
   }
   .p_sabor {
-    font-size: .85rem;
+    font-size: 1rem;
   }
   .p_infoLg {
-    font-size: .76rem;
+    font-size: 1.08rem;
     font-weight: 300; 
-  }
-  .p_info {
-    font-size: .76rem;
-    font-weight: 600; 
   }
   .p_btnBuy {
     color: $color-white;
-    font-size: .76rem;
+    font-weight: 300;
+    font-size: .95rem;
+  }
+  .p_info {
+    font-size: .95rem;
+    font-weight: 700; 
   }
   .p_table {
-    font-size: .7rem;
+    font-size: .95rem;
   }
   .p_infoProdcuto {
-    font-size: .65rem;
+    font-size: 1.4rem;
+    font-weight: 300;
     color: $color-primary;
     text-align: center;
   }
   .p_terminos {
-    font-size: .55rem;
-    line-height: 1.6;
+    font-size: .65rem;
     font-weight: 600; 
   }
   .p_derechos {
     font-size: .65rem;
-    text-align: center;
-    font-weight: 600; 
+    text-align: left;
   }
   
-  .letterSpace {
-    letter-spacing: 2.4px;
-  }
 }

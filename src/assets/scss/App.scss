@@ -4,6 +4,7 @@
   width: 100%;
   height:fit-content;
   overflow-x:hidden;
+  background-color: linear-gradient(to bottom, #F0F0F0, #FFFFFF);
 }
 
 .wp_nabvarFull {
@@ -26,6 +27,9 @@
           width: 100%;
           z-index: 0;
         }
+      }
+      .menu_show {
+        display: none;
       }
       li {
         list-style: none;
@@ -62,6 +66,9 @@
       left: -6.5rem;
       width: 15rem;
       transform:rotate(-50deg)
+    }
+    #fresa3 {
+      display: none;
     }
   }
 }
@@ -290,12 +297,20 @@
 
 .wp_footer {
   padding: 2rem .8rem ;
-  .wp_headerF {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+  display: grid;
+  grid-template: 
+    "wp-img1 wp-img2" 
+    "wp-text wp-text"
+  ;
+  .wp_img1 {
+    grid-area: wp-img1;
+  }
+  .wp_img2 {
+    grid-area: wp-img2;
+    margin-left: auto;
   }
   .wp_infoFooter {
+    grid-area: wp-text;
     padding-top: .8rem;
   }
 }
@@ -321,8 +336,8 @@
       }
     }
   }
+
   .wp_banner {
-    
     .wp_grid {
       padding: 0 1.5rem;
       grid-template: 
@@ -335,45 +350,26 @@
       .wp_imgProducto {
         width: 50%;
         margin: 1.4rem auto;
-        img {
-          left: 0;
-        }
       }
       .wp_btnSabores {
         width: fit-content;
         margin: auto;
-        grid-area: wp-btns;
-        z-index: 3;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         .btn_sabor {
-          padding: .1rem 0;
-          border-radius: 5rem;
-          margin-left: .6rem;
-          border: 1px solid $color-btnBorderOpacity;
-          width: 4.4rem;
-          background-color: transparent;
+          padding: .2rem 0;
+          margin-left: .8rem;
+          width: 4.8rem;
           &:nth-last-child(3) {
-            margin-left: .3rem !important;
+            margin-left: .5rem !important;
           }
         }
         .active {
-          background-color: $color-btnOpacity;
-          border: none;
-          padding: .15rem 0;
+          padding: .28rem 0;
         }
       }
       .wp_textInfo {
-        grid-area: wp-text;
         .p_infoLg {
-          margin: .5rem 0;
-        }
-        .btn_buy {
-          width: 100%;
-          background-color: $color-primary;
-          border-radius: 0;
-          border: none;
-          margin: .5rem 0;
-          padding: 1rem 2rem;
+          margin: .8rem 0;
         }
       }
       .wp_imgsAvalado {
@@ -385,6 +381,565 @@
           justify-content: space-around;
           align-items: center;
           img {
+            width: 5.5rem;
+            &:first-child {
+              width: 4.5rem;
+            }
+          }
+        }
+      }
+      .wp_btnScroll {
+        .btn_scroll {
+          width: 3.2rem;
+          height: 3.2rem;
+        }
+      }
+    }
+    
+    #shapeBg {
+      height: 134vh;
+    }
+  }
+  
+  .wp_infoNutri {
+    margin-top: 6rem;
+    .wp_grid {
+      padding: 0 1.5rem;
+    }
+    .wp_fresasAbsolute {
+      #fresa7 {
+        top: calc(50% - 4.2rem);
+        left: -1.7rem;
+        width: 22%;
+      }
+    }
+  }
+  
+  .wp_productos {
+    .wp_content {
+      .wp_contentProductos {
+        .producto {
+          img {
+            width: 7.8rem;
+            margin-right: 1rem;
+          }
+          &:nth-child(1) {
+            img {
+              width: 10.5rem;
+            }
+          }
+          &:last-child {
+            img {
+              width: 9.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .wp_footer {
+    padding: 2rem 1rem 3rem;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .wp_nabvarFull {
+    .wp_nabvar {
+      nav {
+        li {
+          .menu_bars {
+            width: 1.75rem;
+            span {
+              height: .24rem;
+            }
+          }
+        }
+      }
+    }
+    .wp_fresasAbsolute {
+      #fresa2 {
+        right: -6rem;
+        width: 19rem;
+        transform:rotate(18deg);
+      }
+      #fresa5 {
+        left: -5.5rem;
+        width: 13rem;
+      }
+    }
+  }
+  
+  .wp_banner {
+    .wp_grid {
+      padding: 0 1.5rem;
+      grid-template: 
+      "wp-img" 20rem
+      "wp-btns" 
+      "wp-text" 
+      "wp-imgs"
+      "wp-btnS"  / 1fr
+      ;
+      .wp_imgProducto {
+        width: 50%;
+      }
+      .wp_btnSabores {
+        margin-bottom: 1.5rem;
+        .btn_sabor {
+          padding: .1rem 0;
+          margin-left: .8rem;
+          width: 5.8rem;
+          &:nth-last-child(3) {
+            margin-left: .6rem !important;
+          }
+        }
+        .active {
+          background-color: $color-btnOpacity;
+          border: none;
+          padding: .2rem 0;
+        }
+      }
+      .wp_textInfo {
+        .p_infoLg {
+          margin: 1rem 0;
+        }
+      }
+      .wp_imgsAvalado {
+        grid-area: wp-imgs;
+        width: 70%;
+        margin: 1.8rem auto;
+        div {
+          img {
+            width: 5.5rem;
+            &:first-child {
+              width: 4.5rem;
+            }
+          }
+        }
+      }
+      .wp_btnScroll {
+        .btn_scroll {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+    }
+    
+    #shapeBg {
+      height: 112vh;
+    }
+  }
+  
+  .wp_infoNutri {
+    margin-top: 6rem;
+    .wp_grid {
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template: 
+      "wp-img"
+      "wp-text" 
+      "wp-table"  / 1fr
+      ;
+      .wp_tabla {
+        margin: 1.8rem 0;
+      }
+    }
+    .wp_fresasAbsolute {
+      #fresa6 {
+        width: 24%;
+      }
+      #fresa7 {
+        top: calc(50% - 4rem);
+        left: -1.8rem;
+        width: 22%;
+      }
+    }
+  }
+  
+  .wp_productos {
+    .wp_content {
+      padding: 3rem 0 5.5rem;
+      .wp_contentProductos {
+        margin-top: 5rem;
+        .producto {
+          padding-left: .8rem;
+          img {
+            width: 8rem;
+            margin-right: .8rem;
+          }
+          &:nth-child(1) {
+            img {
+              width: 11rem;
+            }
+          }
+          &:last-child {
+            img {
+              width: 11rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .wp_footer {
+    padding: 2rem 1rem 3rem;
+    .wp_headerF {
+      img {
+        width: 3.5rem;
+        &:last-child {
+          width: 4.5rem;
+        }
+      }
+    }
+    .wp_infoFooter {
+      padding-top: .8rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .wp_nabvarFull {
+    .wp_nabvar {
+      nav {
+        padding: 1rem 3rem 1rem;
+        .wp_logo {
+          width: 9rem;
+        }
+        li {
+          list-style: none;
+          .menu_bars {
+            width: 1.8rem;
+            span {
+              height: .3rem;
+            }
+          }
+        }
+      }
+    }
+    .wp_fresasAbsolute {
+      #fresa2 {
+        right: -5rem;
+        width: 21rem;
+        transform:rotate(18deg);
+      }
+      #fresa5 {
+        top: 5.5rem;
+        left: -7.5rem;
+        width: 18rem;
+      }
+    }
+  }
+  
+  .wp_banner {
+    .wp_grid {
+      padding: 0 2.5rem;
+      display: grid;
+      grid-template: 
+      "wp-img" 30rem
+      "wp-btns" 
+      "wp-text" 
+      "wp-imgs"
+      "wp-btnS"  / 1fr
+      ;
+      .wp_imgProducto {
+        width: 42%;
+        margin: 1.6rem auto;
+      }
+      .wp_btnSabores {
+        grid-area: wp-btns;
+        z-index: 3;
+        margin-bottom: 2rem;
+        .btn_sabor {
+          margin-left: 1.5rem;
+          border: 2px solid $color-btnBorderOpacity;
+          width: 9.5rem;
+          &:nth-last-child(3) {
+            margin-left: 1rem !important;
+          }
+        }
+        .active {
+          background-color: $color-btnOpacity;
+          border: none;
+          padding: .3rem 0;
+        }
+      }
+      .wp_textInfo {
+        grid-area: wp-text;
+        .p_infoLg {
+          margin: 1.2rem 0;
+        }
+        .btn_buy {
+          margin: 1.5rem 0;
+          padding: 1.5rem 2rem;
+        }
+      }
+      .wp_imgsAvalado {
+        grid-area: wp-imgs;
+        width: 70%;
+        margin: 2.5rem auto;
+        div {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          img {
+            width: 8rem;
+            &:first-child {
+              width: 6.5rem;
+            }
+          }
+        }
+      }
+      .wp_btnScroll {
+        grid-area: wp-btnS;
+        text-align: center;
+        margin: auto;
+        .btn_scroll {
+          width: 4.5rem;
+          height: 4.5rem;
+        }
+      }
+    }
+    
+    #shapeBg {
+      height: 124vh;
+    }
+  }
+  
+  .wp_infoNutri {
+    margin-top: 10rem;
+    margin-bottom: 1.5rem;
+    .wp_grid {
+      padding: 0 2rem;
+      display: grid;
+      grid-template: 
+      "wp-img"
+      "wp-text" 
+      "wp-table"  / 1fr
+      ;
+      .wp_textInfo {
+        margin: 3rem 0;
+        div {
+          margin-bottom: 2rem;
+        }
+      }
+      .wp_tabla {
+        margin: 2rem 0;
+        table {
+          .wp_trTabla {
+            .aling_l {
+              width: 80%;
+              text-align: right;
+              padding: .8rem 1.5rem ;
+            }
+            .aling_r {
+              width: 20%;
+              padding: .8rem 1.5rem;
+            }
+          }
+        }
+      }
+    }
+    .wp_fresasAbsolute {
+      #fresa7 {
+        top: calc(50% - 7rem);
+        left: -3rem;
+        width: 18%;
+      }
+    }
+  }
+  
+  .wp_productos {
+    .wp_content {
+      padding: 4rem 0 6rem;
+      .wp_contentProductos {
+        width: 100%;
+        margin-top: 5rem;
+        .producto {
+          padding-left: 2rem;
+          img {
+            width: 14rem;
+            margin-right: 1.5rem;
+          }
+          &:nth-child(1) {
+            img {
+              width: 19rem;
+            }
+          }
+          &:last-child {
+            img {
+              width: 19rem;
+            }
+          }
+        }
+        &::-webkit-scrollbar {
+          width: 0;
+        }
+      }
+    }
+  }
+  
+  .wp_footer {
+    padding: 3rem 2.5rem 4rem;
+    display: grid;
+    align-items:center;
+    grid-template: 
+      "wp-img1 wp-img2" 
+      "wp-text wp-text"
+    ;
+    .wp_img1 {
+      grid-area: wp-img1;
+      img {
+        width: 8rem;
+      }
+    }
+    .wp_img2 {
+      grid-area: wp-img2;
+      margin-left: auto;
+      img {
+        width: 9rem;
+      }
+    }
+    .wp_infoFooter {
+      grid-area: wp-text;
+      padding-top: .8rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  .wp_nabvarFull {
+    position: relative;
+    .wp_nabvar {
+      nav {
+        padding: 1rem 6rem;
+        .wp_logo {
+          width: 9rem;
+        }
+        .menu_show {
+          display: flex;
+          height: fit-content;
+          align-items: center;
+          li {
+            display: inline;
+            margin-left: 4rem;
+            a {
+              color: $color-secondary;
+              text-decoration: none;
+            }
+          }
+          .social_media {
+            ul {
+              display: inline;
+              li {
+                margin-left: 1.5rem;
+              }
+            }
+          }
+        }
+        li {
+          .menu_bars {
+            display: none;
+          }
+        }
+      }
+    }
+    .wp_fresasAbsolute {
+      #fresa2 {
+        position: absolute;
+        top: 0rem;
+        right: 15rem;
+        width: 26rem;
+        transform:rotate(0deg);
+        filter: blur(5px);
+      }
+      #fresa5 {
+        display: none;
+      }
+      #fresa3 {
+        display: block;
+        position: absolute;
+        top: -5rem;
+        left: 9rem;
+        width: 15rem;
+        transform:rotate3d(-13, 180, 1, 150deg)
+      }
+    }
+  }
+  
+  .wp_banner {
+    width: 100%;
+    height: fit-content;
+    
+    .wp_grid {
+      padding: 0 4rem;
+      display: grid;
+      grid-template: 
+      "wp-img wp-btns" 14rem
+      "wp-img wp-text" 15rem
+      "wp-img wp-imgs" 8rem
+      "wp-btnS wp-btnS" 8rem
+      ;
+      position: relative;
+      z-index: 1;
+      .wp_imgProducto {
+        grid-area: wp-img;
+        width: 35rem;
+        margin: auto;
+        img {
+          position: relative;
+          left: calc(50% - 8rem);
+          top: 5rem;
+          width: 55%;
+        }
+      }
+      .wp_btnSabores {
+        grid-area: wp-btns;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        margin: 12rem 0 0;
+        .btn_sabor {
+          padding: 0rem 0;
+          margin-left: 1rem;
+          width: 5.5rem;
+          &:nth-last-child(3) {
+            margin-left: .6rem !important;
+          }
+        }
+        .active {
+          background-color: $color-btnOpacity;
+          border: none;
+          padding: .15rem 0;
+        }
+      }
+      .wp_textInfo {
+        grid-area: wp-text;
+        width: 80%;
+        .p_infoLg {
+          width: 89%;
+          padding: .5rem 0;
+          margin: .5rem 0;
+        }
+        .btn_buy {
+          width: 39%;
+          background-color: $color-primary;
+          border-radius: 0;
+          border: none;
+          margin: .5rem 0;
+          padding: 1rem 2rem;
+        }
+      }
+      .wp_imgsAvalado {
+        grid-area: wp-imgs;
+        width: 50%;
+        margin: 1rem 0;
+        div {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          img {
+            margin-right: 2rem;
             width: 5rem;
             &:first-child {
               width: 4rem;
@@ -411,42 +966,41 @@
     
     #shapeBg {
       position: absolute;
-      top: 0rem;
+      top: -6rem;
       width: 100%;
-      height: 122vh;
-      transform: skewY(10deg);
-      z-index: -1;
+      height: 112vh;
+      transform: skewY(5deg);
       background-image: linear-gradient(to bottom, $color-gradientOne, $color-gradientTwo);
     }
   }
   
   .wp_infoNutri {
-    margin-top: 5rem;
-    margin-bottom: .5rem;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
     height: fit-content;
     position: relative;
     .wp_grid {
       padding: 0 1rem;
+      width: 59%;
+      margin: auto;
       display: grid;
       grid-template: 
-      "wp-img"
-      "wp-text" 
-      "wp-table"  / 1fr
+      "wp-title wp-title"
+      "wp-text wp-table"
       ;
       .wp_title {
-        grid-area: wp-img;
+        grid-area: wp-title;
       }
       .wp_textInfo {
         margin: 1.5rem 0;
         grid-area: wp-text;
         div {
-          margin-bottom: 1.5rem;
+          margin-bottom: 2.5rem;
         }
         .reset_span {
-          font-weight: normal;
+          width: 87.9%;
           span {
-            font-weight: 600;
-            display: block;
+            font-weight: 700;
           }
         }
       }
@@ -455,27 +1009,16 @@
         color: $color-primary;
         margin: 1.5rem 0;
         table {
+          width: 33.5rem;
           .wp_trTabla {
-            height: 2rem;
             .aling_l {
-              width: 80%;
+              width: 55%;
               text-align: right;
-              padding: 0 .5rem ;
+              padding: .8rem 1.2rem ;
             }
             .aling_r {
               width: 20%;
-              padding: 0 .5rem;
-            }
-          }
-          tr, td {
-            border: hidden;
-          }
-          tr {
-            &:nth-child(2n+1) {
-              background-color: #FAFAFA;
-            }
-            &:nth-child(2n) {
-              background-color:#f8f8f8;
+              padding: .8rem 1.2rem;
             }
           }
         }
@@ -504,33 +1047,31 @@
     background-size: cover;
     background-repeat: no-repeat;
     .wp_content {
-      padding: 3rem 0 5rem;
+      padding: 4rem 0 6rem;
       .wp_title {
         text-align:center;
       }
       .wp_contentProductos {
         width: 100%;
-        margin-top: 5rem;
+        height: fit-content;
+        margin-top: 4rem;
         display: flex;
+        justify-content:space-evenly;
         align-items: flex-end;
-        overflow-x: scroll;
         .producto {
           img {
-            width: 6.5rem;
-            margin-right: .5rem;
+            width: 14rem;
+            margin-right: 0;
           }
           &:nth-child(1) {
             img {
-              width: 9.8rem;
+              width: 20.5rem;
             }
           }
           &:last-child {
             img {
-              width: 8.5rem;
+              width: 20rem;
             }
-          }
-          &::-webkit-scrollbar {
-            width: 0;
           }
         }
       }
@@ -538,15 +1079,34 @@
   }
   
   .wp_footer {
-    padding: 2rem .8rem ;
-    .wp_headerF {
-      display: flex;
-      justify-content:space-between;
-      align-items: center;
+    padding: 2rem 2.5rem ;
+    display: grid;
+    align-items:flex-end;
+    grid-template: 
+      "wp-img1 wp-text wp-img2" / 5rem 25rem auto
+      ;
+    .wp_img1 {
+      grid-area: wp-img1;
+      img {
+        width: 3rem;
+      }
+    }
+    .wp_img2 {
+      grid-area: wp-img2;
+      img {
+        width: 5rem;
+      }
     }
     .wp_infoFooter {
-      padding-top: .8rem;
+      padding-top: 0;
+      .p_terminos {
+        span {
+          padding: 0 .5rem;
+        }
+      }
+      .p_derechos {
+        padding: .7rem .5rem;
+      }
     }
   }
-  
 }
