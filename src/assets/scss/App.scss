@@ -10,10 +10,10 @@
 .wp_nabvarFull {
   position: relative;
   .wp_nabvar {
+    position: fixed;
     width: 100%;
     background-image: linear-gradient(to bottom, $color-white, rgba(255, 255, 255, 0.67));
     z-index: 5;
-    position: relative;
     overflow-x: hidden;
     nav {
       height: fit-content;
@@ -35,6 +35,9 @@
         list-style: none;
         .menu_bars {
           width: 1.6rem;
+          border: none;
+          background: transparent;
+          transition: all ease-in;
           span {
             width: inherit;
             height: .2rem;
@@ -42,9 +45,28 @@
             display:block;
             background-color: #b98b3c;
             border-radius: 1rem;
+            transition: .5s;
             &:nth-last-child(2) {
               width: calc(100% - 5px);
               margin-left: auto;
+            }
+          }
+        }
+        .active {
+          position: relative;
+          span {
+            transition: .3s;
+            &:nth-last-child(1) {
+              position: absolute;
+              top: 0;
+              transform: rotate(-45deg);
+            }
+            &:nth-last-child(3) {
+              transform: rotate(45deg);
+              width: inherit;
+            }
+            &:nth-last-child(2) {
+              display: none;
             }
           }
         }
@@ -71,10 +93,46 @@
       display: none;
     }
   }
+  .wp_menuMobile.display-block {
+    display: block;
+  }
+  .wp_menuMobile.display-none {
+    display: none;
+  }
+  .wp_menuMobile {
+    width: 100%;
+    position: fixed;
+    top: 4.4rem;
+    z-index: 10;
+    .wp_whidthMenu {
+      width: 100%;
+      height: calc(100vh - 4.4rem);
+      border-top: 1px solid $color-btnBorderOpacity;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.67), rgba(255, 255, 255, 0.95));
+      position: absolute;
+      top: 0rem;
+      right: 0;
+      ul {
+        padding: 4rem 2rem;
+        li, a {
+          list-style: none;
+          text-decoration: none;
+          color: $color-primary;
+        }
+        li {
+          padding: 2rem 0;
+        }
+        a:hover {
+          border-bottom: 3px solid $color-primary;
+        }
+      }
+    }
+  }
 }
 
 .wp_banner {
   width: 100%;
+  margin-top: 4.5rem;
   height: fit-content;
   
   .wp_grid {
@@ -310,16 +368,23 @@
 .wp_footer {
   padding: 2rem .8rem ;
   display: grid;
+  align-items: center;
   grid-template: 
     "wp-img1 wp-img2" 
     "wp-text wp-text"
   ;
   .wp_img1 {
     grid-area: wp-img1;
+    img {
+      width: 3rem;
+    }
   }
   .wp_img2 {
     grid-area: wp-img2;
     margin-left: auto;
+    img {
+      width: 3.5rem;
+    }
   }
   .wp_infoFooter {
     grid-area: wp-text;
@@ -452,6 +517,16 @@
   
   .wp_footer {
     padding: 2rem 1rem 3rem;
+    .wp_img1 {
+      img {
+        width: 3.5rem;
+      }
+    }
+    .wp_img2 {
+      img {
+        width: 4rem;
+      }
+    }
   }
 }
 
@@ -596,12 +671,14 @@
   
   .wp_footer {
     padding: 2rem 1rem 3rem;
-    .wp_headerF {
+    .wp_img1 {
       img {
-        width: 3.5rem;
-        &:last-child {
-          width: 4.5rem;
-        }
+        width: 4rem;
+      }
+    }
+    .wp_img2 {
+      img {
+        width: 4.5rem;
       }
     }
     .wp_infoFooter {
@@ -639,6 +716,17 @@
         top: 5.5rem;
         left: -7.5rem;
         width: 18rem;
+      }
+    }
+    .wp_menuMobile {
+      top: 5.8rem;
+      .wp_whidthMenu {
+        height: calc(100vh - 5.8rem);
+        ul {
+          li {
+            padding: 3rem 0;
+          }
+        }
       }
     }
   }
@@ -802,14 +890,14 @@
     .wp_img1 {
       grid-area: wp-img1;
       img {
-        width: 8rem;
+        width: 7rem;
       }
     }
     .wp_img2 {
       grid-area: wp-img2;
       margin-left: auto;
       img {
-        width: 9rem;
+        width: 8rem;
       }
     }
     .wp_infoFooter {
