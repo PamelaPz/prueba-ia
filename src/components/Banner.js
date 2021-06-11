@@ -6,7 +6,6 @@ import flechaScroll from '../assets/images/flecha.svg';
 function Banner() {
   return (
     <div className="wp_banner">
-        <div id="shapeBg"></div>
         <div className="wp_grid">
             <div className="wp_imgProducto">
                 <img src={productoYogurt} alt="producto"/>
@@ -34,6 +33,7 @@ function Banner() {
                 <button className="btn_scroll"><img src={flechaScroll} alt=""/></button>
             </div>
         </div>
+        <div id="shapeBg"></div>
     </div>
   );
 }

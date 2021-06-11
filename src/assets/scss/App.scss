@@ -3,7 +3,8 @@
 .wp_nabvar {
   width: 100%;
   background-image: linear-gradient(to bottom, $color-white, rgba(255, 255, 255, 0.67));
-  z-index: 2;
+  z-index: 5;
+  position: relative;
   nav {
     height: fit-content;
     padding: 10px 22px 12px;
@@ -52,6 +53,7 @@
     "wp-imgs"
     "wp-btnS"  / 1fr
     ;
+    position: relative;
     z-index: 1;
     .wp_imgProducto {
       grid-area: wp-img;
@@ -130,7 +132,7 @@
       }
     }
   }
-
+  
   #shapeBg {
     position: absolute;
     top: 0rem;
@@ -146,6 +148,7 @@
   margin-top: 5rem;
   margin-bottom: .5rem;
   height: fit-content;
+  position: relative;
   .wp_grid {
     padding: 0 1rem;
     display: grid;
@@ -202,6 +205,21 @@
       }
     }
   }
+  .wp_fresasAbsolute {
+    #fresa6 {
+      position: absolute;
+      top: 1rem;
+      right: -.8rem;
+      width: 25%;
+      filter: blur(1.5px);
+    }
+    #fresa7 {
+      position: absolute;
+      top: calc(50% - 5.5rem);
+      left: -1.5rem;
+      width: 24%;
+    }
+  }
 }
 
 .wp_productos {
@@ -252,5 +270,23 @@
   }
   .wp_infoFooter {
     padding-top: .8rem;
+  }
+}
+
+.wp_fresasAbsolute {
+  #fresa2 {
+    position: absolute;
+    top: -.2rem;
+    right: -8rem;
+    width: 20rem;
+    transform:rotate(15deg);
+    filter: blur(10px);
+  }
+  #fresa5 {
+    position: absolute;
+    top: 5rem;
+    left: -6.5rem;
+    width: 15rem;
+    transform:rotate(-50deg)
   }
 }
